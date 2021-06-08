@@ -76,7 +76,7 @@ def parse_manifest(plugin):
 
 def get_readme():
     response = urlopen(
-        u"https://api.github.com/repos/Dan-in-CA/SIP_plugins/readme"
+        u"https://api.github.com/repos/adrianbostan/SIP_plugins/readme"
     )
     data = response.read()
     d = json.loads(data.decode('utf-8'))
@@ -165,7 +165,7 @@ class install_plugins(ProtectedPage):
         for p in list(qdict.keys()):  # Get plugins to install
             #           https://raw.github.com/<username>/<repo>/<branch>/some_directory/file.r #### Example
             response = urlopen(
-                u"https://raw.github.com/Dan-in-CA/SIP_plugins/master/"
+                u"https://raw.github.com/adrianbostan/SIP_plugins/master/"
                 + p
                 + u"/"
                 + p
@@ -183,7 +183,7 @@ class install_plugins(ProtectedPage):
             for f in short_list:
                 pf = f.split()
                 response = urlopen(
-                    u"https://raw.github.com/Dan-in-CA/SIP_plugins/master/"
+                    u"https://raw.github.com/adrianbostan/SIP_plugins/master/"
                     + p
                     + u"/"
                     + pf[0]
